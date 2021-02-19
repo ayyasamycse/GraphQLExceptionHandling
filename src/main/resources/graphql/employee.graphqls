@@ -1,0 +1,22 @@
+type Employee {
+	employeeId:ID
+	firstName:String
+	lastName:String
+	age:Int
+	address:String
+}
+
+type ResponseEntity{
+	message:String
+}
+
+type Mutation {
+	createEmployee(firstName:String,lastName:String,age:Int,address:String):ResponseEntity
+	deleteEmployeeById(employeeId:Int):ResponseEntity
+}
+
+type Query {
+	getEmployee:[Employee]
+	getEmployeeById(employeeId:Int):Employee
+}
+
